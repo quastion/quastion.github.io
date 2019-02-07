@@ -205,9 +205,10 @@ class Manager {
         let cell;
         let cellsOnLine = [], indexCellOnLine = 0;
         //Вносим приоритет на то, чтобы поставить 0 в середину поля
-        if(line.line[(line.line.length-1)/2].mark === mark.void)
+        if(line.line[Math.floor((line.line.length-1)/2)].parentNode.rowIndex == Math.floor((line.line.length-1)/2) &&
+            line.line[Math.floor((line.line.length-1)/2)].mark === mark.void)
         {
-            cell = line.line[(line.line.length-1)/2];
+            cell = line.line[Math.floor((line.line.length-1)/2)];
         }
         else
         {
