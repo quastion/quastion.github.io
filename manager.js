@@ -58,7 +58,7 @@ class Manager {
         });
 
         let cell;
-        while(true)
+        while(endOfGame === false)
         {
             if((cell = this._getCellOnLine(maxAssessment)) === undefined)
             {
@@ -66,13 +66,13 @@ class Manager {
                 switch (isWin) {
                     case -1:
                         this._win('Player');
-                        break;
+                        return;
                     case 1:
                         this._win('Computer');
-                        break;
+                        return;
                     default:
                         this.generateMap(this.rowsCount, this.columnsCount);
-                        break;
+                        return;
                 }
 
                 linesAssessment.splice(linesAssessment.indexOf(maxAssessment),1);
@@ -86,18 +86,19 @@ class Manager {
             }
             else
             {
-                this.renderer.mark(cell, mark.enemy);
                 let isWin = this._checkToWin();
                 switch (isWin) {
                     case -1:
                         this._win('Player');
-                        break;
+                        return;
                     case 1:
                         this._win('Computer');
-                        break;
+                        return;
                     default:
                         break;
                 }
+                this.renderer.mark(cell, mark.enemy);
+
                 break;
             }
         }
