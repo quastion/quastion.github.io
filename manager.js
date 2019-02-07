@@ -132,14 +132,6 @@ class Manager {
         let lines = [];
         let lineIndex = 0;
         //Получить вертикальные и горизонтальные линии
-        //горизонтальные
-        for(let i = Math.floor((this.rowsCount-1)/2); i < this.rowsCount; i++)
-        {
-            lines[lineIndex] = [];
-            for (let j = 0; j < this.columnsCount; j++)
-                lines[lineIndex][j] = cells[i][j];
-            lineIndex++;
-        }
         for(let i = 0; i < Math.floor((this.rowsCount-1)/2); i++)
         {
             lines[lineIndex] = [];
@@ -172,7 +164,21 @@ class Manager {
                 lines[lineIndex][j] = cells[j][i];
             lineIndex++;
         }
+        //Перемешаем в случайном порядке
+        lines.sort(function (a,b) {
+            return Math.random() - 0.5;
+        })
+        //Получить вертикальные и горизонтальные линии
+        //горизонтальные
+        for(let i = Math.floor((this.rowsCount-1)/2); i < this.rowsCount; i++)
+        {
+            lines[lineIndex] = [];
+            for (let j = 0; j < this.columnsCount; j++)
+                lines[lineIndex][j] = cells[i][j];
+            lineIndex++;
+        }
         return lines;
+
     }
 
     //Получить оценку перспективности линии
