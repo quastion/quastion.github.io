@@ -1,0 +1,38 @@
+table {
+    border: chocolate solid 20px;
+    padding: 10px;
+    border-radius: 6px;
+    margin: auto;
+}
+
+#win-dialog{
+    margin: auto;
+    text-align: center;
+}
+
+td {
+    height: 25px;
+    width: 25px;
+    border: black solid 1px;
+    border-radius: 3px;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+td:hover{
+    border-color: darkred;
+    background: chocolate;
+    transition-duration: 0.5s;
+}
+
+.hide-transition{
+    opacity: .0;
+    transition-duration: 3.5s;
+}
+
+.show-transition{
+    display: block;
+    opacity: 1.0;
+    transition-duration: 1.5s;
+}
+
