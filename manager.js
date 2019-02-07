@@ -7,6 +7,7 @@ let mark = {
     enemy: 'o'
 }
 let cells;
+let endOfGame = false;
 
 // =====================================================================================
 // ======================================= Логика ======================================
@@ -24,33 +25,24 @@ class Manager {
 
     generateMap(rowsCount, columnsCount) {
         let self = this;
+        this.container.innerHTML = '';
         this.rowsCount = rowsCount;
         this.columnsCount = columnsCount;
         this.renderer.init(rowsCount, columnsCount);
         this.renderer.addCellsClickListeners(function () {
-            if(this.textContent === mark.void)
+            if(!endOfGame && this.textContent === mark.void)
             {
                 self.renderer.mark(this, mark.player);
                 self.makeStep();
             }
         });
+        endOfGame = false;
         this.init();
     }
 
     makeStep() {
         let self = this;
-        //self.renderer.mark(0,1,mark.enemy);
-        // for(let i = 0; i < cells.length; i++)
-        // {
-        //     for (let j = 0; j < cells[i].length; j++)
-        //     {
-        //         if(cells[i][j].mark == mark.void)
-        //         {
-        //             self.renderer.mark(i, j, mark.enemy);
-        //             return;
-        //         }
-        //     }
-        // }
+
         let lines = this._getLines();
         let linesAssessment = lines.map(line => {
                 return {
@@ -70,6 +62,19 @@ class Manager {
         {
             if((cell = this._getCellOnLine(maxAssessment)) === undefined)
             {
+                let isWin = this._checkToWin();
+                switch (isWin) {
+                    case -1:
+                        this._win('Player');
+                        break;
+                    case 1:
+                        this._win('Computer');
+                        break;
+                    default:
+                        this.generateMap(this.rowsCount, this.columnsCount);
+                        break;
+                }
+
                 linesAssessment.splice(linesAssessment.indexOf(maxAssessment),1);
                 maxAssessment.assessment = -3;
                 if(linesAssessment.length == 0)
@@ -85,10 +90,10 @@ class Manager {
                 let isWin = this._checkToWin();
                 switch (isWin) {
                     case -1:
-                        this._win('Computer');
+                        this._win('Player');
                         break;
                     case 1:
-                        this._win('Player');
+                        this._win('Computer');
                         break;
                     default:
                         break;
@@ -102,6 +107,7 @@ class Manager {
 
     _win(winner)
     {
+        endOfGame = true;
         this.renderer.showWinDialog(winner);
     }
 
@@ -177,6 +183,12 @@ class Manager {
             if(cell.mark === mark.player)
                 assessment-=1;
         });
+        //Если на линии 2 клетки отмечены игроком - надо ему помешать, ставим макс. приоритет
+        if(assessment == 5)
+            assessment = 99999;
+        else
+        if(assessment == -1)
+            assessment = 66666;
         return assessment;
     }
 
