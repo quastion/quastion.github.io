@@ -196,12 +196,11 @@ class Manager {
     _getCellOnLine(line)
     {
         let cell;
+        let cellsOnLine = [], indexCellOnLine = 0;
         for(let i = 0; i < line.line.length; i++)
             if(line.line[i].mark === mark.void)
-            {
-                cell = line.line[i];
-                break;
-            }
+                cellsOnLine[indexCellOnLine++] = line.line[i];
+        cell = cellsOnLine[Math.floor(Math.random()*cellsOnLine.length)];
         return cell;
     }
 
