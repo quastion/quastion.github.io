@@ -132,15 +132,22 @@ class Manager {
         let lines = [];
         let lineIndex = 0;
         //Получить вертикальные и горизонтальные линии
-        //вертикальные
-        for(let i = 0; i < this.rowsCount; i++)
+        //горизонтальные
+        for(let i = Math.floor((this.rowsCount-1)/2); i < this.rowsCount; i++)
         {
             lines[lineIndex] = [];
             for (let j = 0; j < this.columnsCount; j++)
                 lines[lineIndex][j] = cells[i][j];
             lineIndex++;
         }
-        //горизонтальные
+        for(let i = 0; i < Math.floor((this.rowsCount-1)/2); i++)
+        {
+            lines[lineIndex] = [];
+            for (let j = 0; j < this.columnsCount; j++)
+                lines[lineIndex][j] = cells[i][j];
+            lineIndex++;
+        }
+        //вертикальные
         for(let i = 0; i < this.columnsCount; i++)
         {
             lines[lineIndex] = [];
@@ -197,10 +204,19 @@ class Manager {
     {
         let cell;
         let cellsOnLine = [], indexCellOnLine = 0;
-        for(let i = 0; i < line.line.length; i++)
-            if(line.line[i].mark === mark.void)
-                cellsOnLine[indexCellOnLine++] = line.line[i];
-        cell = cellsOnLine[Math.floor(Math.random()*cellsOnLine.length)];
+        //Вносим приоритет на то, чтобы поставить 0 в середину поля
+        if(line.line[(line.line.length-1)/2].mark === mark.void)
+        {
+            cell = line.line[(line.line.length-1)/2];
+        }
+        else
+        {
+            for(let i = 0; i < line.line.length; i++)
+                if(line.line[i].mark === mark.void)
+                    cellsOnLine[indexCellOnLine++] = line.line[i];
+            cell = cellsOnLine[Math.floor(Math.random()*cellsOnLine.length)];
+        }
+
         return cell;
     }
 
