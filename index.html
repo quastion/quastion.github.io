@@ -4,17 +4,42 @@
     <meta charset="UTF-8">
     <link href="styles.css" rel="stylesheet">
     <title>Title</title>
-    <script src="/manager.js" type="text/javascript"></script>
 </head>
-
 <body>
+    <div id="menu">
+        <input type="button" onclick="loadGeneral()" value="General App">
+        <input type="button" onclick="loadAI()"  value="AI App">
+    </div>
+    <div id="load">
+        <img src="http://www.coolwebmasters.com/uploads/posts/2014-10/1414255352_loading-01.gif" width="80px" height="60px">
+    </div>
     <div id="win-dialog" class="hide-transition">Победа</div>
     <div id="container"></div>
     <script>
-
-        let manager = new Manager(container);
-        manager.generateMap(3,3);
-
+        function loadGeneral(){
+            let script = document.createElement('script');
+            script.addEventListener('load', function () {
+                let manager = new Manager(container);
+                manager.generateMap(3,3);
+                load.style.display = 'none';
+            });
+            script.setAttribute('src', 'manager.js');
+            document.getElementsByTagName('head')[0].appendChild(script);
+            menu.style.display = 'none';
+            load.style.display = 'block';
+        }
+        function loadAI(){
+            let script = document.createElement('script');
+            script.addEventListener('load', function () {
+                let manager = new Manager(container);
+                manager.generateMap(3,3);
+                load.style.display = 'none';
+            });
+            script.setAttribute('src', 'managerAI.js');
+            document.getElementsByTagName('head')[0].appendChild(script);
+            menu.style.display = 'none';
+            load.style.display = 'block';
+        }
     </script>
 </body>
 </html>
