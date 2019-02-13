@@ -26,7 +26,7 @@ body {
     display: flex;
 }
 
-@media handheld and (max-width: 500px){
+@media handheld or (max-width: 500px){
     .calculator-container{
         min-width: 300px;
     }
