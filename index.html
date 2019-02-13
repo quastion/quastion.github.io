@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +41,125 @@
             menu.style.display = 'none';
             load.style.display = 'block';
         }
+    </script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylessheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="params-container">
+            <div class="params-container-label">
+                <div class="label">
+                    <p>
+                        Стоимость недвижимости
+                    </p>
+                </div>
+            </div>
+
+            <div class="params-container-value">
+                <div class="label">
+                    <input measure='$' type="text" id="cost_value" value="10 $" oninput=" inputOninputListener(this, cost_slider)">
+                </div>
+                <div class="slider">
+                    <input id="cost_slider" type="range" value="10" min="0" max="10000" oninput="sliderOninputListener(this, cost_value, '$')" >
+                </div>
+            </div>
+        </div>
+        <div class="params-container">
+            <div class="params-container-label">
+                <div class="label">
+                    <p>
+                        Первоначальный взнос
+                    </p>
+                </div>
+            </div>
+            <div class="params-container-value">
+                <div class="label">
+                    <input measure='$' type="text" id="initial_fee_value" value="10 $" oninput=" inputOninputListener(this, initial_fee_slider)">
+                </div>
+                <div class="slider">
+                    <input id="initial_fee_slider" type="range" value="10" min="0" max="5000" oninput="sliderOninputListener(this, initial_fee_value, '$')">
+                </div>
+            </div>
+        </div>
+        <div class="params-container">
+            <div class="params-container-label">
+                <div class="label">
+                    <p>
+                        Срок кредита
+                    </p>
+                </div>
+            </div>
+            <div class="params-container-value">
+                <div class="label">
+                    <input measure='лет' type="text" id="term_of_credit" value="5 лет" oninput=" inputOninputListener(this, term_of_credit_slider)">
+                </div>
+                <div class="slider">
+                    <input id="term_of_credit_slider" type="range" value="5" min="0" max="10" oninput="sliderOninputListener(this, term_of_credit, 'лет')">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sliderOninputListener(slider, label, measure_name) {
+            let sliderValue = slider['value'];
+            let costValue = label;
+            costValue.value = sliderValue + ' '+label.getAttribute('measure');
+        }
+        function inputOninputListener(input, slider) {
+            let value = parseInt(input.value);
+            if(value >=0 && value <= slider.max)
+            {
+                slider.value = value;
+                input.value = value + ' ' + input.getAttribute('measure');
+            }
+            else
+            {
+                if(isNaN(value) || value <= 0)
+                {
+                    slider.value = 0;
+                    input.value = 0 + ' ' + input.getAttribute('measure');;
+                }
+                else
+                {
+                    slider.value = slider.max;
+                    input.value = slider.max + ' ' + input.getAttribute('measure');;
+                }
+            }
+            input.selectionStart = parseInt(input.value).toString().length;
+            input.selectionEnd = parseInt(input.value).toString().length;
+        }
+        function inputOnactiveListener(event) {
+            let input = event.currentTarget;
+            let charIndex = 0;
+            for (let i = input.value.length-1; i > 0 ; i--)
+            {
+                if(!isNumber(input.value[i]))
+                    charIndex = i;
+            }
+            input.selectionStart = charIndex;
+            input.selectionEnd = charIndex;
+
+        }
+        function isNumber(number){
+            return !isNaN(number) && isFinite(number) && number!=' ';
+        }
+
+
+        //Применить ко всем input[type="text"] обработчик, который будет смещать
+        //курсор внутри поля при нажатии на него, чтобы установить курсор на последней
+        //цифре
+        let textInputFields = document.body.querySelectorAll('input[type="text"]');
+        textInputFields.forEach(field => field.addEventListener('click', inputOnactiveListener));
     </script>
 </body>
 </html>
