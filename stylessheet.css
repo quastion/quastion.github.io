@@ -26,7 +26,7 @@ body {
     display: flex;
 }
 
-@media (max-width: 1090px){
+@media (max-width: 500px){
     .calculator-container{
         min-width: 300px;
     }
