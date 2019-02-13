@@ -1,0 +1,165 @@
+
+body {
+    background: rgba(0,0,0,0.08);
+    font-family: "Times New Roman";
+    font-size: 14px;
+}
+
+.calculator-container{
+
+    min-width: 500px;
+    max-width: 750px;
+    /*height: 800px;*/
+    /*border: black solid 1px;*/
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+.params-container{
+    width: auto;
+    height: 60px;
+    /*border: black solid 1px;*/
+    /*white-space: nowrap;*/
+    padding: 5px 7px 5px 5px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+@media only screen and (max-width: 500px){
+    .calculator-container{
+        min-width: 300px;
+    }
+    .params-container{
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .params-container .params-container-label{
+        width: 100% !important;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .params-container .params-container-label .label{
+        padding-left: 0px !important;
+    }
+
+    .params-container .params-container-value{
+        /*min-width: 400px;*/
+        /*max-width: 600px;*/
+        min-width: 200px;
+        width: 100% !important;
+        height: 100%;
+        /*display: inline-flex;*/
+        /*border: black solid 1px;*/
+        /*float: right;*/
+    }
+}
+
+.params-container .params-container-label{
+    min-width: 120px;
+    /*width: 150px;*/
+    width: 20%;
+    height: 100%;
+    /*display: inline-flex;*/
+    white-space: normal;
+    /*border: black solid 1px;*/
+    /*float: left;*/
+    /*display: table;*/
+    margin-right: 30px;
+}
+
+.params-container .params-container-label .label{
+    /*display: table-cell;*/
+    height: 100%;
+    text-align: left;
+    padding-left: 10px;
+    display: table;
+}
+.params-container-label .label p{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 17px;
+}
+
+
+
+
+.params-container .params-container-value{
+    /*min-width: 400px;*/
+    /*max-width: 600px;*/
+    min-width: 300px;
+    /*width: 600px;*/
+    width: 80%;
+    height: 100%;
+    /*display: inline-flex;*/
+    /*border: black solid 1px;*/
+    /*float: right;*/
+}
+
+.params-container .params-container-value .label{
+
+    /*padding-left: 10px;*/
+    /*display: table-cell;*/
+
+}
+
+.params-container .params-container-value .label input[type="text"] {
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    /*padding-bottom: 10px;*/
+    /*padding-top: 10px;*/
+    font-size: 20px;
+    border: rgba(0,0,0,0.08) solid 1px;
+    border-radius: 4px;
+    height: 50px;
+    width: 95%;
+}
+
+.params-container .params-container-value .label input[type="text"]:hover{
+    border: rgba(0,0,0,0.18) solid 1px;
+}
+
+.params-container .params-container-value .label input[type="text"]:focus{
+    border: rgba(0,0,0,0.30) solid 1px;
+}
+
+.params-container .params-container-value .slider{
+    margin-top: -12px;
+    margin-left: -2px;
+    margin-right: 14px;
+}
+
+
+
+.params-container .params-container-value input[type="range"]{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: #31b300;
+    outline: none;
+}
+
+.params-container .params-container-value input[type="range"]::-webkit-slider-thumb {
+    cursor: grab;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: darkgreen solid 4px;
+    border-radius: 50%;
+}
+
+.params-container .params-container-value input[type="range"]::-moz-range-thumb {
+    /*cursor: grab;*/
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+
+}
+
+
