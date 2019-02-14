@@ -11,7 +11,7 @@ body {
     max-width: 750px;
     /*height: 800px;*/
     /*border: black solid 1px;*/
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     background: white;
 }
@@ -21,12 +21,12 @@ body {
     height: 60px;
     /*border: black solid 1px;*/
     /*white-space: nowrap;*/
-    padding: 5px 7px 5px 5px;
-    margin-bottom: 30px;
+    padding: 5px 7px 5px 0;
+    margin-bottom: 40px;
     display: flex;
 }
 
-@media (max-width: 500px){
+@media only screen and (max-width: 500px){
     .calculator-container{
         min-width: 300px;
     }
@@ -34,6 +34,7 @@ body {
         display: block;
         height: auto;
         width: 100%;
+        margin-bottom: 25px;
     }
 
     .params-container .params-container-label{
@@ -61,7 +62,7 @@ body {
 .params-container .params-container-label{
     min-width: 120px;
     /*width: 150px;*/
-    width: 20%;
+    width: 25%;
     height: 100%;
     /*display: inline-flex;*/
     white-space: normal;
@@ -92,11 +93,27 @@ body {
     /*max-width: 600px;*/
     min-width: 300px;
     /*width: 600px;*/
-    width: 80%;
+    width: 75%;
     height: 100%;
     /*display: inline-flex;*/
     /*border: black solid 1px;*/
     /*float: right;*/
+}
+
+.params-container .params-container-value .marks-container{
+    padding-top: 10px;
+    display: flex;
+}
+
+.params-container .params-container-value .marks-container span{
+    color: rgba(0,0,0,0.60);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.params-container .params-container-value .marks-container span[type='middle']{
+    margin-left: auto;
+    display: inline-flex;
 }
 
 .params-container .params-container-value .label{
@@ -116,7 +133,7 @@ body {
     border: rgba(0,0,0,0.08) solid 1px;
     border-radius: 4px;
     height: 50px;
-    width: 95%;
+    width: 97%;
 }
 
 .params-container .params-container-value .label input[type="text"]:hover{
@@ -130,10 +147,8 @@ body {
 .params-container .params-container-value .slider{
     margin-top: -12px;
     margin-left: -2px;
-    margin-right: 14px;
+    margin-right: 4px;
 }
-
-
 
 .params-container .params-container-value input[type="range"]{
     -webkit-appearance: none;
@@ -160,6 +175,181 @@ body {
 
 input[type=range]::-webkit-slider-runnable-track {
 
+}
+
+/*Стили для строки с чекбоксом*/
+.checkbox-params-container{
+    /*height: 50px;*/
+    border-bottom: rgba(0,0,0,0.30) solid 1px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.checkbox-params-container > .label{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.checkbox-params-container .checkbox-container{
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+}
+
+.checkbox-params-container  > .checkbox-container .label{
+    display: inline-flex;
+    /*width: 70%;*/
+}
+
+.checkbox-params-container  > .checkbox-container > .checkbox-item{
+    display: inline-flex;
+    float: right;
+    margin: auto;
+    text-align: center;
+    /*width: 30%;*/
+}
+
+.checkbox-params-container > .checkbox-container > .checkbox-item > input[type='checkbox']{
+    margin: auto;
+}
+
+.align-label{
+    display: table;
+    height: 100%;
+    /*padding-left: 10px;*/
+    width: 100%;
+}
+
+.align-label p{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.6);
+}
+
+.checkbox-container p{
+    font-size: 20px;
+    color: #31b300;
+    text-align: right;
+}
+
+
+
+
+
+.checkbox {
+    /*position: absolute;*/
+    z-index: -1;
+    opacity: 0;
+    /*margin: 10px 0 0 20px;*/
+}
+.checkbox + label {
+    position: relative;
+    padding: 0 0 0 60px;
+    cursor: pointer;
+    top: -4px;
+}
+.checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+    transition: .2s;
+}
+.checkbox + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: .2s;
+}
+.checkbox:checked + label:before {
+    background: #9FD468;
+}
+.checkbox:checked + label:after {
+    left: 26px;
+}
+.checkbox:focus + label:before {
+    /*box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);*/
+}
+
+
+/*======================================*/
+/*Стили для результатов подсчета*/
+/*======================================*/
+
+.results-container{
+    width: 100%;
+    display: flex;
+}
+
+.result-container{
+    width: 100%;
+    text-align: left;
+    margin: auto;
+}
+
+.result-container > .label{
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.83)
+}
+
+.result-container > .result{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(49,179,0,0.83)
+}
+
+.wrapper{
+    border-left: rgba(0,0,0,0.19) solid 1px;
+    width: 0px;
+    margin: 0 10px 0 10px;
+}
+
+@media only screen and (max-width: 500px){
+    .results-container{
+        display: block;
+    }
+
+    .result-container{
+        margin: 0;
+        display: inline-flex;
+        width: 100%;
+    }
+
+    .wrapper{
+        border-bottom: rgba(0,0,0,0.19) solid 1px;
+        border-left: none;
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .result-container > .label{
+        width: 50%;
+        text-align: left;
+    }
+
+    .result-container > .result{
+        width: 50%;
+        text-align: right;
+    }
 }
 
 
