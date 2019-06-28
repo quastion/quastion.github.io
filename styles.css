@@ -13,6 +13,9 @@ body{
 
 .header{
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .content, .aside{
@@ -50,10 +53,16 @@ body{
 
 
 
-
+.menu{
+  position: relative;
+}
 
 .nav{
   z-index: 5;
+  background: rgba(0,0,0,0);
+}
+
+.nav__bg-color_black{
   background: black;
 }
 
@@ -67,6 +76,11 @@ body{
   background: black;
   min-width: 100%;
   left: 0;
+  top: 100%;
+}
+
+.hor_content-mobile{
+  position: absolute !important;
   top: 100%;
 }
 
@@ -104,6 +118,8 @@ body{
 
 .ver_item, .hor_item{
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .ver_item:hover, .hor_item:hover{
@@ -117,7 +133,37 @@ body{
 a{
   text-decoration: none !important;
   color: white !important;
+  display: block;
 }
+
+.nav_menu-item{
+  align-self: center;
+  width: 48px;
+  height: 48px;
+  background: url('/public/img/menu-icon.png');
+  background-size: 100% 100%;
+  float: right;
+}
+
+.nav_menu-item__close{
+  background: url('/public/img/menu-icon-close.png');
+  background-size: 100% 100%;
+}
+
+.logo{
+  /* background: url(''); */
+  /* background-size: 100% 100%; */
+  margin: 15px;
+  /* float: left; */
+  height: 48px;
+}
+
+.logo_icon{
+  height: 100%;
+}
+
+
+
 
 
 .gallery{
@@ -125,6 +171,7 @@ a{
   height: 100vh;
   position: relative;
   overflow: hidden;
+  margin-top: 78px;
 }
 
 .gallery_container{
@@ -226,15 +273,13 @@ a{
 }
 
 .image_1{
-  background: url('image1.jpg') no-repeat center/cover;
+  background: url('/public/img/image1.jpg') no-repeat center/cover;
 }
 
 .image_2{
-  background: url('image2.jpg') no-repeat center/cover;
+  background: url('/public/img/image2.jpg') no-repeat center/cover;
 }
 
 .image_3{
-  background: url('image3.jpg') no-repeat center/cover;
+  background: url('/public/img/image3.jpg') no-repeat center/cover;
 }
-
-
