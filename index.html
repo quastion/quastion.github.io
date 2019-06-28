@@ -9,9 +9,13 @@
   </head>
   <body>
     <div class="header container-fluid">
-      <div class="row">
+      <div class="menu row nav__bg-color_black justify-content-between">
+        <div class="logo">
+          <img class="logo_icon" src="logo.png" alt="">
+        </div>
+        <div class="nav_menu-item d-lg-none"></div>
 
-        	<ul class="nav col">
+        	<ul class="nav col-12 col-lg pt-lg-0 pr-0 d-none d-lg-flex nav__bg-color_black">
         		<li class="hor_item"><a href="#">Home</a></li>
         		<li class="hor_item"><a href="#">My BMW collection</a>
         			<ul class="hor_content">
@@ -44,6 +48,27 @@
         	</ul>
         </div>
     </div>
+
+    <script type="text/javascript">
+      var nav = $('.header').find('.nav')[0];
+      var menuIcon= $('.header').find('.nav_menu-item')[0];
+      $(menuIcon).on('click', function() {
+        if($(nav).hasClass('d-none')){
+          $(nav).addClass('d-block');
+          $(nav).removeClass('d-none');
+          //$(nav).addClass('hor_content-mobile');
+          $(menuIcon).addClass('nav_menu-item__close');
+          $(nav).addClass('h-100');
+        }
+        else{
+          $(nav).removeClass('d-block');
+          $(nav).addClass('d-none');
+          $(nav).removeClass('hor_content-mobile');
+          $(menuIcon).removeClass('nav_menu-item__close');
+        }
+      });
+
+    </script>
 
       <div class="gallery container-fluid">
         <div class="row gallery_container justify-content-between">
@@ -133,6 +158,7 @@
            }
 
           }
+
           setInterval(function() {
 
             moveSlide('right');
