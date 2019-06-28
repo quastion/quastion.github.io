@@ -140,13 +140,13 @@ a{
   align-self: center;
   width: 48px;
   height: 48px;
-  background: url('/public/img/menu-icon.png');
+  background: url('menu-icon.png');
   background-size: 100% 100%;
   float: right;
 }
 
 .nav_menu-item__close{
-  background: url('/public/img/menu-icon-close.png');
+  background: url('menu-icon-close.png');
   background-size: 100% 100%;
 }
 
