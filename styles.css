@@ -227,7 +227,7 @@ a{
 }
 
 .image_1{
-  background: url('image1.jpg') no-repeat center/cover;
+  background: url('/image1.jpg') no-repeat center/cover;
 }
 
 .image_2{
