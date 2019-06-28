@@ -53,6 +53,7 @@ body{
 
 
 
+
 .menu{
   position: relative;
 }
@@ -62,12 +63,27 @@ body{
   background: rgba(0,0,0,0);
 }
 
+.nav-mobile{
+}
+
 .nav__bg-color_black{
   background: black;
 }
 
 .hor_item{
   padding: 15px;
+}
+
+.hor_item__mobile{
+  display: block !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.hor_item__mobile > a{
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
 
 .hor_content{
@@ -79,9 +95,14 @@ body{
   top: 100%;
 }
 
+.hor_content__mobile{
+  position: static;
+  background: #444;
+}
+
 .hor_content-mobile{
-  position: absolute !important;
-  top: 100%;
+  //position: absolute !important;
+  //top: 100%;
 }
 
 .hor_item:hover > .hor_content{
@@ -96,7 +117,17 @@ body{
   padding-right: 15px;
 }
 
+.ver_item__mobile{
+  display: block !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
 
+.ver_item__mobile > a{
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
 
 .ver_content{
   position: absolute;
@@ -104,6 +135,11 @@ body{
   top: 0%;
   background: black;
   display: none;
+}
+
+.ver_content__mobile{
+  position: static;
+  background: #444;
 }
 
 .ver_item:hover > .ver_content{
@@ -155,7 +191,7 @@ a{
   /* background-size: 100% 100%; */
   margin: 15px;
   /* float: left; */
-  height: 5em;
+  height: 36px
 }
 
 .logo_icon{
@@ -171,7 +207,7 @@ a{
   height: 100vh;
   position: relative;
   overflow: hidden;
-  margin-top: 78px;
+  margin-top: 36px;
 }
 
 .gallery_container{
