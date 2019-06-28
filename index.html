@@ -1,223 +1,145 @@
-<!--
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="styles.css" rel="stylesheet">
-    <title>Title</title>
-</head>
-<body>
-    <div id="menu">
-        <input type="button" onclick="loadGeneral()" value="General App">
-        <input type="button" onclick="loadAI()"  value="AI App">
-    </div>
-    <div id="load">
-        <img src="http://www.coolwebmasters.com/uploads/posts/2014-10/1414255352_loading-01.gif" width="80px" height="60px">
-    </div>
-    <div id="win-dialog" class="hide-transition">Победа</div>
-    <div id="container"></div>
-    <script>
-        function loadGeneral(){
-            let script = document.createElement('script');
-            script.addEventListener('load', function () {
-                let manager = new Manager(container);
-                manager.generateMap(3,3);
-                load.style.display = 'none';
-            });
-            script.setAttribute('src', 'manager.js');
-            document.getElementsByTagName('head')[0].appendChild(script);
-            menu.style.display = 'none';
-            load.style.display = 'block';
-        }
-        function loadAI(){
-            let script = document.createElement('script');
-            script.addEventListener('load', function () {
-                let manager = new Manager(container);
-                manager.generateMap(3,3);
-                load.style.display = 'none';
-            });
-            script.setAttribute('src', 'managerAI.js');
-            document.getElementsByTagName('head')[0].appendChild(script);
-            menu.style.display = 'none';
-            load.style.display = 'block';
-        }
-    </script>
-</body>
-</html>
--->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="header container-fluid">
+      <div class="row">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="stylessheet.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="sk-lib.js"></script>
-</head>
-<body>
-    <div class="calculator-container">
-        <div class="params-container">
-            <div class="params-container-label">
-                <div class="align-label">
-                    <p>
-                        Стоимость недвижимости
-                    </p>
-                </div>
-            </div>
-            <div class="params-container-value">
-                <div class="label">
-                    <input measure='$' type="text" value="10 $" >
-                </div>
-                <div class="slider">
-                    <input type="range" value="1000" min="100" max="10000"  >
-                </div>
-                <div class="marks-container">
-                    <span></span>
-                    <span type="middle"></span>
-                </div>
-            </div>
-        </div>
-        <div class="params-container">
-            <div class="params-container-label">
-                <div class="align-label">
-                    <p>
-                        Первоначальный взнос
-                    </p>
-                </div>
-            </div>
-            <div class="params-container-value">
-                <div class="label">
-                    <input measure='$' type="text" value="10 $">
-                </div>
-                <div class="slider">
-                    <input type="range" value="10" min="100" max="5000">
-                </div>
-                <div class="marks-container">
-                    <span></span>
-                    <span type="middle"></span>
-                </div>
-            </div>
-        </div>
-        <div class="params-container">
-            <div class="params-container-label">
-                <div class="align-label">
-                    <p>
-                        Срок кредита
-                    </p>
-                </div>
-            </div>
-            <div class="params-container-value">
-                <div class="label">
-                    <input measure='лет' type="text" value="5 лет">
-                </div>
-                <div class="slider">
-                    <input type="range" value="5" min="1" max="10">
-                </div>
-                <div class="marks-container">
-                    <span></span>
-                    <span type="middle"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="checkbox-params-container">
-            <div class="label">
-                <div class="align-label">
-                    <p>Скидка 0,3% при покупке квартиры на ДомКлик. </p>
-                </div>
-            </div>
-            <div class="checkbox-container">
-                <div class="label">
-                    <div class="align-label">
-                        <p>-1%</p>
-                    </div>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" class="checkbox" id="checkbox1">
-                    <label for="checkbox1"></label>
-                </div>
-            </div>
-        </div>
-
-        <div class="checkbox-params-container">
-            <div class="label">
-                <div class="align-label">
-                    <p>Есть зарплатная карта Сбербанка</p>
-                </div>
-            </div>
-            <div class="checkbox-container">
-                <div class="label">
-                    <div class="align-label">
-                        <p>-2.1%</p>
-                    </div>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" class="checkbox" id="checkbox2">
-                    <label for="checkbox2"></label>
-                </div>
-            </div>
-        </div>
-
-        <div class="checkbox-params-container">
-            <div class="label">
-                <div class="align-label">
-                    <p>Электронная регистрация</p>
-                </div>
-            </div>
-            <div class="checkbox-container">
-                <div class="label">
-                    <div class="align-label">
-                        <p>-0.1%</p>
-                    </div>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" class="checkbox" id="checkbox3">
-                    <label for="checkbox3"></label>
-                </div>
-            </div>
-        </div>
-
-        <div class="results-container">
-            <div class="result-container">
-                <div class="label">
-                    Сумма кредита
-                </div>
-                <div class="result">
-                    2588 $
-                </div>
-            </div>
-            <div class="wrapper"></div>
-            <div class="result-container">
-                <div class="label">
-                    Ежемесячный платеж
-                </div>
-                <div class="result">
-                    5555 $
-                </div>
-            </div>
-            <div class="wrapper"></div>
-            <div class="result-container">
-                <div class="label">
-                    Необходимый доход
-                </div>
-                <div class="result">
-                    5555 $
-                </div>
-            </div>
-            <div class="wrapper"></div>
-            <div class="result-container">
-                <div class="label">
-                    Процентная ставка
-                </div>
-                <div class="result">
-                    10 %
-                </div>
-            </div>
+        	<ul class="nav col">
+        		<li class="hor_item"><a href="#">Home</a></li>
+        		<li class="hor_item"><a href="#">My BMW collection</a>
+        			<ul class="hor_content">
+        				<li class="ver_item"><a href="#">X3</a></li>
+        				<li class="ver_item"><a href="#">x5</a></li>
+        				<li class="ver_item"><a href="#">X6</a>
+        					<ul class="ver_content">
+        						<li class="ver_item"><a href="#">Black</a></li>
+                    <li class="ver_item"><a href="#">White</a>
+                      <ul class="ver_content">
+                        <li class="ver_item"><a href="#">New</a></li>
+                        <li class="ver_item"><a href="#">Old</a>
+                          <ul class="ver_content">
+                            <li class="ver_item"><a href="#">With Money</a></li>
+                            <li class="ver_item"><a href="#">With New Wheels</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+        					</ul>
+        				</li>
+        			</ul>
+        		</li>
+        		<li class="hor_item"><a href="#">My Money</a>
+        			<ul class="hor_content">
+        				<li class="ver_item"><a href="#">$</a></li>
+        				<li class="ver_item"><a href="#">Rub</a></li>
+        			</ul>
+        		</li>
+        	</ul>
         </div>
     </div>
 
-    <script>
+      <div class="gallery container-fluid">
+        <div class="row gallery_container justify-content-between">
 
-    </script>
+
+          <div class="gallery_control-left col-1">
+            <div class="gallery_control-image">
+              L
+            </div>
+          </div>
+
+          <div class="gallery_slide image_3"></div>
+          <div class="gallery_slide image_2"></div>
+          <div class="gallery_slide image_1"></div>
+
+          <div class="gallery_control-right col-1">
+            <div class="gallery_control-image">
+              R
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        $(window).on('load', function(){
+          var root = $(".gallery")[0];
+          var lControl = $(root).find('.gallery_control-left > .gallery_control-image')[0];
+          var rControl = $(root).find('.gallery_control-right > .gallery_control-image')[0];
+          var slides = $(root).find('.gallery_slide');
+          var slidesCount = slides.length;
+          var slideIndex = slidesCount-1;
+          var canPress = true;
+          slides[slidesCount-1].classList.add('gallery_slide__selected');
+
+          rControl.onclick = function(event) {
+            moveSlide('right');
+          }
+
+          lControl.onclick = function(event){
+            moveSlide('left');
+          }
+
+          function moveSlide(direction) {
+            if(!canPress) return;
+
+            canPress = false;
+            if(direction === 'left'){
+              slides[slideIndex].classList.remove('gallery_slide__right-to-left');
+              slides[slideIndex].classList.remove('gallery_slide__to-left');
+              slides[slideIndex].classList.remove('gallery_slide__selected');
+              slides[slideIndex].classList.remove('gallery_slide__left-to-right');
+              slides[slideIndex].classList.add('gallery_slide__to-right');
+              if(slideIndex >= slidesCount - 1)
+                slideIndex = 0;
+              else
+                slideIndex++;
+              slides[slideIndex].classList.remove('gallery_slide__right-to-left');
+              slides[slideIndex].classList.remove('gallery_slide__to-left');
+              slides[slideIndex].classList.remove('gallery_slide__to-right');
+              slides[slideIndex].classList.add('gallery_slide__left-to-right');
+              slides[slideIndex].classList.add('gallery_slide__selected');
+
+              slides[slideIndex].addEventListener('animationend', function(){
+                canPress = true;
+             });
+            }
+            else if(direction === 'right') {
+              slides[slideIndex].classList.remove('gallery_slide__left-to-right');
+              slides[slideIndex].classList.remove('gallery_slide__to-right');
+              slides[slideIndex].classList.remove('gallery_slide__selected');
+              slides[slideIndex].classList.remove('gallery_slide__right-to-left');
+              slides[slideIndex].classList.add('gallery_slide__to-left');
+              if(slideIndex <= 0)
+                slideIndex = slidesCount - 1;
+              else
+                slideIndex--;
+              slides[slideIndex].classList.remove('gallery_slide__left-to-right');
+              slides[slideIndex].classList.remove('gallery_slide__to-right');
+              slides[slideIndex].classList.remove('gallery_slide__to-left');
+              slides[slideIndex].classList.add('gallery_slide__right-to-left');
+              slides[slideIndex].classList.add('gallery_slide__selected');
+
+              slides[slideIndex].addEventListener('animationend', function(){
+                canPress = true;
+             });
+           }
+
+          }
+          setInterval(function() {
+
+            moveSlide('right');
+          }, 2000);
+        });
+      </script>
+
+
 </body>
 </html>
