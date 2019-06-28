@@ -120,7 +120,6 @@ a{
 }
 
 
-
 .gallery{
   width: 100%;
   height: 100vh;
@@ -159,6 +158,7 @@ a{
   color: black;
   border-radius: 50%;
   position: absolute;
+  border: black solid 1px;
 }
 
 .gallery_slide{
@@ -169,7 +169,6 @@ a{
   top: -100%;
   z-index: -1;
   display: grid;
-  border: black solid 1px;
 }
 
 .gallery_slide__selected{
@@ -227,7 +226,7 @@ a{
 }
 
 .image_1{
-  background: url('/image1.jpg') no-repeat center/cover;
+  background: url('image1.jpg') no-repeat center/cover;
 }
 
 .image_2{
@@ -235,6 +234,7 @@ a{
 }
 
 .image_3{
-  background: url('/public/img/image3.jpg') no-repeat center/cover;
+  background: url('image3.jpg') no-repeat center/cover;
 }
+
 
