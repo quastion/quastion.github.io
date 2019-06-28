@@ -273,13 +273,13 @@ a{
 }
 
 .image_1{
-  background: url('/public/img/image1.jpg') no-repeat center/cover;
+  background: url('image1.jpg') no-repeat center/cover;
 }
 
 .image_2{
-  background: url('/public/img/image2.jpg') no-repeat center/cover;
+  background: url('image2.jpg') no-repeat center/cover;
 }
 
 .image_3{
-  background: url('/public/img/image3.jpg') no-repeat center/cover;
+  background: url('image3.jpg') no-repeat center/cover;
 }
