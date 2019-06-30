@@ -319,3 +319,15 @@ a{
 .image_3{
   background: url('image3.jpg') no-repeat center/cover;
 }
+
+
+
+
+.test-block{
+  width: 200px;
+  height: 300px;
+  border: black solid 1px;
+  margin: 5px;
+  padding: 20px;
+  overflow: hidden;
+}
