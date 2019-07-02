@@ -1,0 +1,238 @@
+
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+}
+
+.header{
+  background: #fff;
+  justify-content: center;
+}
+
+.logo{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.promotion{
+  background-color: #39ade2;
+  overflow: hidden;
+}
+
+.promotion__header{
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 15px;
+  line-height: 1em;
+}
+
+.promotion__desc{
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.self-btn{
+  background-color: #fc5d54;
+  border-radius: 6px;
+}
+
+.self-btn:hover{
+  background-color: #ca3b32;
+  cursor: pointer;
+}
+
+.self-btn_link{
+  text-decoration: none;
+  //height: 50px;
+  //line-height: 50px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  white-space: nowrap;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.self-btn_link:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+.promotion_bg{
+  margin-bottom: 40px;
+}
+
+.promotion_bg-arrow{
+  position: relative;
+}
+
+.promotion_bg-arrow_img{
+  position: absolute;
+  width: 110px;
+  top: -50px;
+  left: -20px;
+
+}
+
+.promotion_bg-seo{
+  width: 600px;
+  min-width: 600px;
+
+}
+
+.promotion_bg-seo_img{
+  width: 100%;
+}
+
+
+
+.accent{
+  background-color: white;
+  padding-bottom: 85px;
+  padding-top: 35px;
+}
+
+.accent_card{
+  background-color: #ebf8fe;
+  padding: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 260px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 50px;
+}
+
+.accent_card:first-child{
+  //margin-top: 0px;
+}
+
+.accent_card_image-container{
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.accent_card_image{
+  margin: auto;
+  display: block;
+}
+
+.accent_card_title{
+  color: #fc5d54;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.accent_card_desc{
+  text-align: center;
+  color: #475966;
+  font-size: 0.6em;
+}
+
+
+
+.benefit{
+  color: white;
+  background-color: #6acff7;
+  padding: 10px;
+}
+
+.benefit_title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 90px;
+}
+
+.benefit_desc{
+  text-align: center;
+  font-size: 0.8em;
+  width: 70%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.benefit_card{
+  display: inline-flex;
+  padding-bottom: 20px;
+  min-width: 350px;
+}
+
+.benefit_card_image{
+  margin: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.benefit_card_image-bg{
+  padding: 1px;
+  border-radius: 50%;
+  background-color: #39ade2;
+  margin-right: 15px;
+  display: block;
+}
+
+.benefit_card_image-container{
+
+}
+
+.benefit_text-container{
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.benefit_card_title{
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.benefit_card_desc{
+  font-size: 0.6em;
+}
+
+.tariff{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.tariff_title{
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fc5d54;
+  padding-bottom: 50px;
+}
+
+.tariff_card{
+  background-color: #ebf8fe;
+  padding: 40px !important;
+  margin: 15px;
+}
+
+.tariff_card_image{
+display: flex;
+justify-content: center;
+}
+
+.tariff_card_title{
+    font-size: 0.6em;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    text-align: center;
+    color: #475966;
+}
+
