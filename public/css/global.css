@@ -380,16 +380,17 @@ justify-content: center;
 
 .request{
   padding-top: 80px;
-  padding-bottom: 80px;
   background-color: #5cc2f1;
+  position: relative;
 }
 
 .form{
 }
 
 .request-form{
-  width: 100%;
+  //width: 100%;
   position: relative;
+  color: #fff;
 }
 
 .form_input{
@@ -409,12 +410,77 @@ justify-content: center;
 }
 
 .request-bg{
-  height: 100%;
+  height: 80%;
   position: absolute;
-  right: 0;
+  right: 100px;
   bottom: 0;
 }
 
 .request-bg_image{
   height: 100%;
+}
+
+.form_title{
+  font-size: 1.2em;
+  font-weight: 1000;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.form_desc{
+  font-size: 0.6em;
+  white-space: nowrap;
+  padding-bottom: 40px;
+}
+
+.form-request_btn-container{
+  padding-top: 20px;
+}
+
+.form_btn{
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  text-align: center;
+}
+
+.request-form_btn{
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  color: white;
+  background-color: #fc5c54;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.request-form_btn:hover{
+  background-color: #ca3b32;
+  cursor: pointer;
+}
+
+.request_arrow-image{
+  margin: auto;
+  display: block;
+  padding-top: 20px;
+}
+
+
+.footer{
+  background-color: #394145;
+  padding-top: 20px;
+}
+
+.footer_credits{
+  display: flex;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 0.8em;
+  align-items: center;
+}
+
+.footer_phone-number{
+  padding-right: 20px;
 }
