@@ -299,6 +299,7 @@ justify-content: center;
   background-color: #fff;
   padding-top: 60px;
   padding-bottom: 60px;
+    overflow: hidden;
 }
 
 .steps-vertical{
@@ -382,6 +383,7 @@ justify-content: center;
   padding-top: 80px;
   background-color: #5cc2f1;
   position: relative;
+  overflow: hidden;
 }
 
 .form{
@@ -471,16 +473,16 @@ justify-content: center;
 .footer{
   background-color: #394145;
   padding-top: 20px;
-}
-
-.footer_credits{
-  display: flex;
   color: #fff;
   white-space: nowrap;
-  font-size: 0.8em;
-  align-items: center;
+  font-size: 0.6em;
+  //overflow: hidden;
 }
 
 .footer_phone-number{
   padding-right: 20px;
+}
+
+.footer_logo{
+  width: 157px;
 }
