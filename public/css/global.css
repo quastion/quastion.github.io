@@ -147,6 +147,7 @@ body{
   color: white;
   background-color: #6acff7;
   padding: 10px;
+  padding-bottom: 90px;
 }
 
 .benefit_title{
@@ -236,3 +237,184 @@ justify-content: center;
     color: #475966;
 }
 
+
+.map{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.feedback{
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ebf8fe;
+}
+
+.feedback_card{
+  padding-top: 40px;
+  padding-left: 0;
+  background-color: #fff;
+  display: inline-flex;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.feedback_card_image-container{
+  //display: flex;
+}
+
+.feedback_card_image{
+  width: 130px;
+  height: 130px;
+}
+
+.feedback_card_text-container{
+  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.feedback_card_char-name{
+  color: #fc5d54;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1em;
+  padding-bottom: 15px;
+}
+
+.feedback_card_title{
+  color: #fc5d54;
+  font-size: 0.6em;
+  padding-bottom: 15px;
+}
+
+.feedback_card_desc{
+  color: #475966;
+  font-size: 0.6em;
+}
+
+
+.steps{
+  background-color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.steps-vertical{
+}
+
+.steps_card{
+}
+
+.steps_card-vertical{
+  display: flex;
+}
+
+.steps_card_circle{
+  border: black solid 1px;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps_card_image{
+  display: block;
+  margin: auto;
+}
+
+.steps_card_title{
+  padding-top: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+}
+
+.steps_card_desc{
+  font-size: 0.6em;
+  color: #475966;
+  text-align: center;
+  padding-top: 30px;
+  width: 140px;
+}
+
+.steps_card_desc-vertical{
+  padding-top: 0;
+  align-self: center;
+  padding-left: 20px;
+  width: 170px;
+  text-align: left;
+}
+
+.top-arrow{
+  height: 100%;
+}
+
+.bottom-arrow{
+  height: 100%;
+  align-self: flex-end;
+  position: relative;
+  top: -40px;
+}
+
+.bottom-arrow-vertical{
+  margin: auto;
+  position: relative;
+  top: 0;
+  left: 20px;
+  height: auto;
+}
+
+.top-arrow-vertical{
+  margin: auto;
+  position: relative;
+  top: 0;
+  left: 90px;
+  height: auto;
+}
+
+
+.request{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #5cc2f1;
+}
+
+.form{
+}
+
+.request-form{
+  width: 100%;
+  position: relative;
+}
+
+.form_input{
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.7em;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form_input:last-child{
+  margin-bottom: 0;
+}
+
+.request-bg{
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.request-bg_image{
+  height: 100%;
+}
