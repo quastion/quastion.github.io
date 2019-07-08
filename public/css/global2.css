@@ -10,7 +10,6 @@ html {
   border: black solid 1px;
 }
 .header {
-  min-width: 600px;
   background: url("/public/images/header-bg.png") no-repeat center center;
   background-size: cover;
   height: 1014px;
