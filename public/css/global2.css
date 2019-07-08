@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+}
+.block {
+  border: black solid 1px;
+}
+.header {
+  min-width: 600px;
+  background: url("/public/images/header-bg.png") no-repeat center center;
+  background-size: cover;
+  height: 1014px;
+  position: relative;
+}
+.header .header-ellipse {
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: calc(50% + 23px);
+  opacity: 0.6;
+}
+.header .header-car {
+  display: block;
+  position: absolute;
+  bottom: -70px;
+  left: calc(50% - 35px);
+}
+.header ul {
+  width: 100%;
+  max-width: 1180px;
+  font-family: "Montserrat";
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header ul h1 {
+  font-size: 30px;
+  line-height: 75px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header ul li {
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+  max-width: 100%;
+  min-height: 50px;
+}
+.header ul li div {
+  display: flex;
+}
+.header ul li div img {
+  display: block;
+  align-self: center;
+}
+.header ul li:first-child {
+  display: block;
+  padding-left: 0;
+}
+.header ul li:last-child {
+  padding-right: 0;
+}
+.header ul h2 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 20px;
+  align-self: center;
+}
+.header ul div + h2 {
+  padding-left: 15px;
+}
+.header ul p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 22px;
+  font-family: "Montserrat";
+}
+.header .mobile-menu-container {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  width: 1px;
+  height: 1px;
+}
+.header .mobile-menu-container:first-child {
+  position: relative;
+  height: 100%;
+}
+@media (max-width: 1190px) {
+  .header .email,
+  .header .whatsapp,
+  .header .phone {
+    display: none;
+  }
+  .header .mobile-menu-container {
+    display: block;
+  }
+  .header .mobile-menu-container .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .header .mobile-menu-container .mobile-menu li {
+    display: flex !important;
+    padding-left: 0px;
+    max-width: 400px;
+  }
+}
+@media (max-width: 1190px) {
+  .header-wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
