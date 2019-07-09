@@ -41,8 +41,7 @@
 
             <div class="mobile-menu-container">
               <div class="menu-icon">
-                <img src="public/images/menu-icon.png" alt="">
-                <img class="hide" src="public/images/menu-icon-close.png" alt="">
+
               </div>
               <div class="popup-bg hide">
               </div>
@@ -79,14 +78,12 @@
               if(menu.hasClass('hide')){
                 bg.removeClass('hide');
                 menu.removeClass('hide');
-                menuIcon.find('img[src="public/images/menu-icon.png"]').addClass('hide');
-                menuIcon.find('img[src="public/images/menu-icon-close.png"]').removeClass('hide');
+                menuIcon.addClass('menu-icon-close');
               }
               else{
                 bg.addClass('hide');
                 menu.addClass('hide');
-                menuIcon.find('img[src="public/images/menu-icon.png"]').removeClass('hide');
-                menuIcon.find('img[src="public/images/menu-icon-close.png"]').addClass('hide');
+                menuIcon.removeClass('menu-icon-close');
               }
           });
         </script>
