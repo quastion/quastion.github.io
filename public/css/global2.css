@@ -14,7 +14,7 @@ html {
   background-size: cover;
   height: 1014px;
   position: relative;
-  min-width: 600px;
+  min-width: 320px;
   overflow: hidden;
 }
 .header .header-ellipse {
