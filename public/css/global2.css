@@ -107,11 +107,15 @@
   z-index: 10;
   position: absolute;
   right: 0;
-  padding-right: 42px;
+  margin-right: 42px;
+  margin-top: 7px;
+  width: 32px;
+  height: 32px;
+  background-image: url('/public/images/menu-icon.png');
 }
-.header .mobile-menu-container .menu-icon img {
-  width: 100%;
-  display: block;
+.header .mobile-menu-container .menu-icon-close {
+  background-image: url('/public/images/menu-icon-close.png');
+  position: fixed;
 }
 .header .mobile-menu-container .popup-bg {
   position: fixed;
@@ -122,6 +126,10 @@
   background-color: black;
 }
 @media (max-width: 1190px) {
+  .header h2 {
+    font-size: 18px !important;
+    line-height: 18px !important;
+  }
   .header .email,
   .header .whatsapp,
   .header .phone {
