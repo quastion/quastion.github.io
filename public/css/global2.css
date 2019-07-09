@@ -15,6 +15,7 @@ html {
   height: 1014px;
   position: relative;
   min-width: 600px;
+  overflow: hidden;
 }
 .header .header-ellipse {
   display: block;
