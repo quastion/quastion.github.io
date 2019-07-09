@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/public/css/global2.css">
     <title></title>
@@ -40,8 +40,14 @@
 
 
             <div class="mobile-menu-container">
-
-                <ul class="mobile-menu">
+              <div class="menu-icon">
+                <img src="public/images/menu-icon.png" alt="">
+                <img class="hide" src="public/images/menu-icon-close.png" alt="">
+              </div>
+              <div class="popup-bg hide">
+              </div>
+              <div class="mobile-menu hide">
+                <ul class="mobile-menu-content">
                   <li>
                     <div>
                       <img src="public/images/email-icon.png" alt="">
@@ -58,12 +64,31 @@
                     <h2>+ 7 (000) 000-00-00</h2>
                   </li>
                 </ul>
+              </div>
             </div>
           </div>
         </div>
 
         <script type="text/javascript">
-
+          'use strict'
+          // Мобильное меню
+          $('.mobile-menu-container > .menu-icon').on('click', function (event) {
+              let menu = $('.mobile-menu-container > .mobile-menu');
+              let bg = $('.mobile-menu-container > .popup-bg');
+              let menuIcon = $('.mobile-menu-container > .menu-icon');
+              if(menu.hasClass('hide')){
+                bg.removeClass('hide');
+                menu.removeClass('hide');
+                menuIcon.find('img[src="public/images/menu-icon.png"]').addClass('hide');
+                menuIcon.find('img[src="public/images/menu-icon-close.png"]').removeClass('hide');
+              }
+              else{
+                bg.addClass('hide');
+                menu.addClass('hide');
+                menuIcon.find('img[src="public/images/menu-icon.png"]').removeClass('hide');
+                menuIcon.find('img[src="public/images/menu-icon-close.png"]').addClass('hide');
+              }
+          });
         </script>
   </body>
 </html>
