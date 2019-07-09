@@ -9,7 +9,7 @@
 .header {
   background: url("/public/images/header-bg.png") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 1024px;
   position: relative;
   overflow: hidden;
 }
