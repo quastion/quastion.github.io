@@ -1,248 +1,217 @@
-// out: global.css, sourcemap: true, compress: false
-
-@images_folder: '/public/images/';
-
-*{
+* {
   margin: 0;
   padding: 0;
 }
-
-body, html{
-  //height: 100%;
-}
-
-.background(@image_path){
-    background: url("@{images_folder}@{image_path}.png")  no-repeat center center;
-    background-size: cover;
-}
-
-.block-size{
+.block-size {
   width: 100%;
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
 }
-
-.hide{
+.hide {
   display: none !important;
 }
-
-.col{
+.col {
   padding-left: 0px;
   padding-right: 0px;
 }
-
-.header{
-  //min-width: 600px;
-  .background('header-bg');
+.header {
+  background: url("/public/images/header-bg.png") no-repeat center center;
+  background-size: cover;
   height: 1014px;
-  // height: 100vh;
   position: relative;
   overflow: hidden;
-
-  .header-ellipse{
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: ~"calc(50% + 23px)";
-    opacity: 0.6;
-  }
-
-  .header-car{
-    display: block;
-    position: absolute;
-    bottom: -70px;
-    left: ~"calc(50% - 35px)";
-  }
-
-  @media (max-width:800px){
-    .header-car, .header-ellipse{
-      display: none;
-    }
-  }
-
-  ul{
-    .block-size;
-    font-family: "Montserrat";
-    padding-top: 30px;
-    padding-bottom: 30px;
-    white-space: nowrap;
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 10;
-
-    h1{
-      font-size: 30px;
-      line-height: 75px;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    li{
-      display: flex;
-      padding-right: 20px;
-      padding-left: 20px;
-      width: auto;
-      max-width: 100%;
-      min-height: 50px;
-      div{
-        display: flex;
-        img{
-          display: block;
-          align-self: center;
-        }
-      }
-    }
-
-    li:first-child{
-      display: block;
-      padding-left: 0;
-    }
-
-    li:last-child{
-      padding-right: 0;
-    }
-
-    h2{
-      font-size: 20px;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      line-height: 20px;
-      align-self: center;
-    }
-
-    div+h2{
-      padding-left: 15px;
-    }
-
-    p{
-      font-size: 14px;
-      color: rgb(255, 255, 255);
-      line-height: 22px;
-      font-family: "Montserrat";
-    }
-  }
-
-  .mobile-menu-container{
-    width: 100%;
+}
+.header .header-ellipse {
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: calc(50% + 23px);
+  opacity: 0.6;
+}
+.header .header-car {
+  display: block;
+  position: absolute;
+  bottom: -70px;
+  left: calc(50% - 35px);
+}
+@media (max-width: 800px) {
+  .header .header-car,
+  .header .header-ellipse {
     display: none;
-    position: absolute;
-    top: 42px;
-    right: 0;
-
-
-    .menu-icon{
-      z-index: 10;
-      position: absolute;
-      right: 0;
-      margin-right: 42px;
-      margin-top: 7px;
-
-      width: 32px;
-      height: 32px;
-      background-image: url('/public/images/menu-icon.png');
-    }
-
-    .menu-icon-close{
-      background-image: url('/public/images/menu-icon-close.png');
-      position: fixed;
-    }
-
-    .popup-bg{
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color:black;
-    }
-  }
-
-  @media (max-width:1190px){
-    h2{
-      font-size: 18px !important;
-      line-height: 18px !important;
-    }
-
-    .email, .whatsapp, .phone{
-      display: none;
-    }
-
-    .mobile-menu-container{
-      display: block;
-
-      .mobile-menu{
-        display: flex;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        align-items: center;
-      }
-
-      .mobile-menu-content{
-        display: block;
-        width: auto;
-        padding: 0;
-
-        li{
-          display: flex !important;
-          padding-left: 0px;
-          padding-right: 0;
-        }
-      }
-    }
-  }
-
-  .block1{
-    .block-size;
-    padding-top: 55px;
-
-    .font{
-      font-size: 65px !important;
-      font-family: "Montserrat";
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      text-transform: uppercase;
-      line-height: 1.231 !important;
-    }
-
-    h2{
-      .font;
-    }
-
-    h3{
-      .font;
-      font-size: 55px !important;
-
-      span{
-        color: #ff8300;
-      }
-    }
-
-
-
-    @media (max-width: 576px){
-      h2{
-          font-size: 30px !important;
-      }
-      h3{
-          font-size: 25px !important;
-      }
-    }
-  }
-
-  @media (max-width: 576px){
-    .block1{
-      padding-top: 25px !important;
-    }
   }
 }
-
-@media (max-width:1190px){
-  .header-wrapper, .block1{
+.header ul {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat";
+  padding-top: 30px;
+  padding-bottom: 30px;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+.header ul h1 {
+  font-size: 30px;
+  line-height: 75px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header ul li {
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+  max-width: 100%;
+  min-height: 50px;
+}
+.header ul li div {
+  display: flex;
+}
+.header ul li div img {
+  display: block;
+  align-self: center;
+}
+.header ul li:first-child {
+  display: block;
+  padding-left: 0;
+}
+.header ul li:last-child {
+  padding-right: 0;
+}
+.header ul h2 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 20px;
+  align-self: center;
+}
+.header ul div + h2 {
+  padding-left: 15px;
+}
+.header ul p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 22px;
+  font-family: "Montserrat";
+}
+.header .mobile-menu-container {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: 0;
+}
+.header .mobile-menu-container .menu-icon {
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  margin-right: 42px;
+  margin-top: 7px;
+  width: 32px;
+  height: 32px;
+  background-image: url('/public/images/menu-icon.png');
+}
+.header .mobile-menu-container .menu-icon-close {
+  background-image: url('/public/images/menu-icon-close.png');
+  position: fixed;
+}
+.header .mobile-menu-container .popup-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+@media (max-width: 1190px) {
+  .header h2 {
+    font-size: 18px !important;
+    line-height: 18px !important;
+  }
+  .header .email,
+  .header .whatsapp,
+  .header .phone {
+    display: none;
+  }
+  .header .mobile-menu-container {
+    display: block;
+  }
+  .header .mobile-menu-container .mobile-menu {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+  }
+  .header .mobile-menu-container .mobile-menu-content {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+  .header .mobile-menu-container .mobile-menu-content li {
+    display: flex !important;
+    padding-left: 0px;
+    padding-right: 0;
+  }
+}
+.header .block1 {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 55px;
+}
+.header .block1 .font {
+  font-size: 65px !important;
+  font-family: "Montserrat";
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.231 !important;
+}
+.header .block1 h2 {
+  font-size: 65px !important;
+  font-family: "Montserrat";
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.231 !important;
+}
+.header .block1 h3 {
+  font-size: 65px !important;
+  font-family: "Montserrat";
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.231 !important;
+  font-size: 55px !important;
+}
+.header .block1 h3 span {
+  color: #ff8300;
+}
+@media (max-width: 576px) {
+  .header .block1 h2 {
+    font-size: 30px !important;
+  }
+  .header .block1 h3 {
+    font-size: 25px !important;
+  }
+}
+@media (max-width: 576px) {
+  .header .block1 {
+    padding-top: 25px !important;
+  }
+}
+@media (max-width: 1190px) {
+  .header-wrapper,
+  .block1 {
     padding-left: 25px;
     padding-right: 25px;
   }
