@@ -2,19 +2,15 @@
   margin: 0;
   padding: 0;
 }
-body,
-html {
-  height: 100%;
-}
-.block {
-  border: black solid 1px;
+.col {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .header {
   background: url("/public/images/header-bg.png") no-repeat center center;
   background-size: cover;
   height: 1014px;
   position: relative;
-  min-width: 320px;
   overflow: hidden;
 }
 .header .header-ellipse {
@@ -41,6 +37,7 @@ html {
   white-space: nowrap;
   display: flex;
   flex-wrap: wrap;
+  z-index: 10;
 }
 .header ul h1 {
   font-size: 30px;
@@ -56,6 +53,7 @@ html {
   width: auto;
   max-width: 100%;
   min-height: 50px;
+  z-index: 10;
 }
 .header ul li div {
   display: flex;
