@@ -9,7 +9,7 @@
 .header {
   background: url("/public/images/header-bg.png") no-repeat center center;
   background-size: cover;
-  height: 1024px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -118,7 +118,6 @@
   .header .mobile-menu-container .mobile-menu li {
     display: flex !important;
     padding-left: 0px;
-    max-width: 400px;
   }
 }
 @media (max-width: 1190px) {
