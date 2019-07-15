@@ -9,15 +9,15 @@
   position: absolute;
   height: 100%;
   display: flex;
-  width: calc(50% + 86px);
-  transition: width 1s;
+  width: 66px;
+  transition: right 1s, left 1s, width 1s;
 }
 .slider .control-wrapper-right {
-  left: 50%;
+  right: -66px;
   justify-content: flex-end;
 }
 .slider .control-wrapper-left {
-  right: 50%;
+  left: -66px;
 }
 .slider .control-wrapper .control {
   align-self: center;
@@ -56,8 +56,13 @@
 }
 @media (max-width: 1352px) {
   .slider .control-wrapper {
-    width: 50%;
-    transition: width 1s;
+    transition: right 1s, left 1s, width 1s;
+  }
+  .slider .control-wrapper-left {
+    left: 0;
+  }
+  .slider .control-wrapper-right {
+    right: 0;
   }
 }
 .slider .content {
@@ -150,7 +155,7 @@ body {
 }
 .header ul li img {
   display: block;
-  height: fit-content;
+  align-self: flex-start;
 }
 .header ul li div {
   display: block;
@@ -176,6 +181,11 @@ body {
   color: #ffffff;
   font-weight: bold;
   line-height: 30px;
+  transition: all ease-in-out 0.15s;
+}
+.header ul h2:hover {
+  transform: scale(1.03);
+  transition: all ease-in-out 0.3s;
 }
 .header ul img + h2,
 .header ul img + div {
@@ -348,6 +358,7 @@ body {
 }
 .header .block1 .btn {
   margin-top: 60px;
+  transition: all 0.5s;
   width: 460px;
   height: 80px;
   line-height: 80px;
@@ -375,6 +386,10 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease-in-out;
 }
+.header .block1 .btn:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
+}
 @media (max-width: 576px) {
   .header .block1 h2 {
     font-size: 29.9px !important;
@@ -400,6 +415,7 @@ body {
   }
   .header .block1 .btn {
     margin-top: 13.8px;
+    transition: all 0.5s;
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -426,6 +442,10 @@ body {
   .header .block1 .btn a:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
+  }
+  .header .block1 .btn:hover {
+    transform: scale(1.01);
+    transition: all 0.5s;
   }
   .header .block1 h3 + h4::before {
     content: '';
@@ -512,6 +532,7 @@ body {
   line-height: 1.778;
 }
 .block2 .product-grid .product .btn {
+  transition: all 0.5s;
   width: 236px;
   height: 41px;
   line-height: 41px;
@@ -543,6 +564,10 @@ body {
 .block2 .product-grid .product .btn a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease-in-out;
+}
+.block2 .product-grid .product .btn:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
 }
 @media (max-width: 576px) {
   .block2 {
@@ -614,7 +639,7 @@ body {
   background-color: #ff8400;
   border-radius: 50%;
   text-align: center;
-  margin-bottom: auto;
+  align-self: flex-start;
   margin-right: 10px;
 }
 .block3 .calculator .fields .item .descritpion p {
@@ -661,6 +686,7 @@ body {
   margin-left: 17px;
 }
 .block3 .calculator .btn {
+  transition: all 0.5s;
   width: 385px;
   height: 68px;
   line-height: 68px;
@@ -689,6 +715,10 @@ body {
 .block3 .calculator .btn a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease-in-out;
+}
+.block3 .calculator .btn:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
 }
 @media (max-width: 768px) {
   .block3 .calculator .fields {
@@ -737,6 +767,7 @@ body {
     margin-top: 0px;
   }
   .block3 .calculator .btn {
+    transition: all 0.5s;
     width: 100%;
     height: 50.048px;
     line-height: 50.048px;
@@ -764,6 +795,10 @@ body {
   .block3 .calculator .btn a:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
+  }
+  .block3 .calculator .btn:hover {
+    transform: scale(1.01);
+    transition: all 0.5s;
   }
   .block3 h1 {
     font-size: 24.84px;
@@ -843,6 +878,7 @@ body {
   }
 }
 .block4 .btn {
+  transition: all 0.5s;
   width: 385px;
   height: 68px;
   line-height: 68px;
@@ -872,12 +908,17 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease-in-out;
 }
+.block4 .btn:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
+}
 @media (max-width: 576px) {
   .block4 h1 {
     font-size: 28.98px;
     margin-top: 50px;
   }
   .block4 .btn {
+    transition: all 0.5s;
     width: 100%;
     height: 50.048px;
     line-height: 50.048px;
@@ -906,6 +947,10 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
   }
+  .block4 .btn:hover {
+    transform: scale(1.01);
+    transition: all 0.5s;
+  }
 }
 .block5 {
   background-image: url('/public/images/block5-bg.png');
@@ -915,7 +960,7 @@ body {
   width: 100%;
   padding-top: 300px;
   margin-top: -100px;
-  padding-bottom: 220px;
+  padding-bottom: 420px;
 }
 .block5 h1 {
   font-size: 45px;
@@ -941,6 +986,7 @@ body {
   margin-right: auto;
 }
 .block5 .wrapper .btn {
+  transition: all 0.5s;
   width: 385px;
   height: 68px;
   line-height: 68px;
@@ -971,6 +1017,10 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease-in-out;
 }
+.block5 .wrapper .btn:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
+}
 @media (max-width: 576px) {
   .block5 {
     padding-top: 230px;
@@ -979,6 +1029,7 @@ body {
     font-size: 28.98px;
   }
   .block5 .wrapper .btn {
+    transition: all 0.5s;
     width: calc(100% - 40px);
     height: 50.048px;
     line-height: 50.048px;
@@ -992,8 +1043,6 @@ body {
     white-space: nowrap;
     margin: auto;
     margin-top: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
   }
   .block5 .wrapper .btn a {
     font-size: 13.8px;
@@ -1009,6 +1058,143 @@ body {
   .block5 .wrapper .btn a:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
+  }
+  .block5 .wrapper .btn:hover {
+    transform: scale(1.01);
+    transition: all 0.5s;
+  }
+}
+.block6 {
+  width: 100%;
+  max-width: 1180px;
+  min-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -200px;
+}
+.block6 h1 {
+  font-size: 45px;
+  font-family: "Montserrat";
+  color: #010101;
+  text-transform: uppercase;
+  line-height: 1.444;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+.block6 h1 span {
+  font-weight: bold;
+}
+.block6 .feedback-card {
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.05);
+}
+.block6 .feedback-card .card-header {
+  display: flex;
+}
+.block6 .feedback-card .card-header .avatar {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 148px;
+  min-height: 148px;
+  width: 148px;
+  height: 148px;
+  margin-right: 20px;
+}
+.block6 .feedback-card .card-header .feedback {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: #010101;
+  line-height: 1.5;
+}
+.block6 .feedback-card .card-header .feedback p {
+  padding-bottom: 10px;
+}
+@media (max-width: 576px) {
+  .block6 .feedback-card .card-header {
+    flex-wrap: wrap;
+  }
+  .block6 .feedback-card .card-header .avatar {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+.block6 .feedback-card .descritpion {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.block6 .feedback-card .descritpion .item {
+  display: flex;
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: #010101;
+  line-height: 1.5;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+.block6 .feedback-card .descritpion .item .icon {
+  display: flex;
+  align-items: baseline;
+}
+.block6 .feedback-card .descritpion .item .icon img {
+  margin-right: 8px;
+}
+@media (max-width: 576px) {
+  .block6 .feedback-card .descritpion {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+  }
+}
+.block6 .feedback-card .photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 15px;
+  grid-auto-rows: 155px;
+}
+.block6 .feedback-card .photos .photo {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+.block6 .feedback-card .slider {
+  display: none;
+}
+.block6 .feedback-card .slider .control {
+  background-color: rgba(255, 132, 0, 0);
+}
+.block6 .feedback-card .slider .control:hover {
+  background-color: rgba(255, 132, 0, 0);
+}
+.block6 .feedback-card .slider .control::before {
+  background-color: rgba(255, 132, 0, 0.5);
+  border: #ff8400 solid 1px;
+  border-radius: 50%;
+}
+@media (max-width: 576px) {
+  .block6 .feedback-card .photos {
+    display: none;
+  }
+  .block6 .feedback-card .slider {
+    display: flex;
+    height: 55vw;
+  }
+}
+@media (max-width: 1180px) {
+  .block6 .feedback-card {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .block6 {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 1190px) {
