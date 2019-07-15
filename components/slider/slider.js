@@ -4,8 +4,10 @@ let sliders = document.body.querySelectorAll('.slider');
 let controls = [];
 sliders.forEach((obj) => {
   let slideWidth = obj.getAttribute('data-slideWidth');
-  let fullScreen = obj.getAttribute('data-fullScreen');
+  if(slideWidth == null) slideWidth = undefined;
+  let fullScreen = obj.getAttribute('data-fullScreen') == "true";
   let visibleSlidesCount = obj.getAttribute('data-visibleSlidesCount');
+  if(visibleSlidesCount == null) visibleSlidesCount = undefined;
   let slider = new Slider({root: obj, slideWidth: slideWidth, fullScreen: fullScreen, visibleSlidesCount:visibleSlidesCount});
   controls.push(slider);
 });
@@ -32,6 +34,7 @@ function Slider(options){
 
   let slidesOnViewport = [];
   let slidesBuffer = [];
+  let slidesContent = [];
 
   function init(){
     content = root.querySelector('.content');
@@ -45,10 +48,21 @@ function Slider(options){
   }
 
   function initSlides(){
-    slides = content.querySelectorAll('img');
+    slides = content.querySelectorAll('.slider-item');
     let contentWidth = parseInt(getComputedStyle(content).width);
 
-    slides = [].map.call(slides, (slide) => {return slide});
+    slidesContent = [].map.call(slides, (slide) => {
+      let slideContent = slide.querySelector('div');
+      if(!slideContent) {
+        slideContent = document.createElement('div');
+      }
+      return slideContent;
+    });
+
+    slides = [].map.call(slides, (slide) => {
+      return slide.querySelector('img');
+    });
+
     if(visibleSlidesCount){
       slideWidth = contentWidth / options.visibleSlidesCount;
       maxSlidesCountOnViewport = visibleSlidesCount;
@@ -61,6 +75,13 @@ function Slider(options){
     let last = slides.slice(slides.length-1, slides.length);
     slides = last.concat(slides);
     slides = slides.concat(first);
+    first = slidesContent.slice(0,slidesContent.length-1);
+    last = slidesContent.slice(slidesContent.length-1, slidesContent.length);
+    slidesContent = last.concat(slidesContent);
+    slidesContent = slidesContent.concat(first);
+    slidesContent = slidesContent.map(elem => {
+      return elem.cloneNode(true);
+    });
     //Конвертация img -> div с фоном
     if(slideWidth >= contentWidth)
       slideWidth = contentWidth;
@@ -71,13 +92,17 @@ function Slider(options){
       slide.style.minWidth = slideWidth + "px";
       slide.style.backgroundImage = 'url('+img.src.substr((img.src).indexOf('/',10))+')';
       slide.classList.add('slide');
-      if(content.contains(img))
-        content.removeChild(img);
       slidesBuffer.push(slide);
       slide.style.transition = "all ease-in-out 1s";
+      slide.appendChild(slidesContent[i]);
       return slide;
     });
     slideWidth = +slideWidth;
+    content.innerHTML = "";
+
+    // slidesBuffer.forEach((slide, i)=>{
+    //   slidesBuffer[i].appendChild(slidesContent[i]);
+    // });
 
     visibleSlidesCount = Math.trunc(contentWidth / slideWidth);
     if(visibleSlidesCount > maxSlidesCountOnViewport) visibleSlidesCount = maxSlidesCountOnViewport;
@@ -89,6 +114,8 @@ function Slider(options){
     else{
       spaceBetweenSlides = (contentWidth - slideWidth)/2;
     }
+
+
     // spaceBetweenSlides = 0;
     slidesOnViewport.forEach((slide, i)=>{
       let pos = (i-1) * (slideWidth+spaceBetweenSlides) + (visibleSlidesCount>1?0:spaceBetweenSlides);
@@ -164,24 +191,24 @@ function Slider(options){
   }
 
   function initEvents(){
-    if(!options.slideWidth) return;
     let contentWidth = parseInt(getComputedStyle(content).width);
 
-    window.addEventListener('resize', (event) => {
 
+    window.addEventListener('resize', (event) => {
+      let slideWidthTemp = slideWidth;
       let contentWidth = parseInt(getComputedStyle(content).width);
       let slidesCount =  Math.trunc(contentWidth / slideWidth);
       if(slidesCount > maxSlidesCountOnViewport) slidesCount = maxSlidesCountOnViewport;
-      if(slideWidth >= contentWidth)
-        slideWidth = contentWidth;
+      if(slideWidthTemp >= contentWidth)
+        slideWidthTemp = contentWidth;
       if(options.fullScreen && options.fullScreen == true)
-        slideWidth = contentWidth;
+        slideWidthTemp = contentWidth;
 
       let slidesCountDifference = slidesCount - visibleSlidesCount;
       if(slidesCount>1)
-        spaceBetweenSlides = (contentWidth - (slideWidth * slidesCount)) / (slidesCount-1);
+        spaceBetweenSlides = (contentWidth - (slideWidthTemp * slidesCount)) / (slidesCount-1);
       else{
-        spaceBetweenSlides = (contentWidth - slideWidth)/2;
+        spaceBetweenSlides = (contentWidth - slideWidthTemp)/2;
       }
       if((!options.fullScreen || options.fullScreen == false) && slidesCount != visibleSlidesCount){
         canwindowResizeRefresh = false
@@ -204,15 +231,16 @@ function Slider(options){
         visibleSlidesCount = slidesCount;
       }
       slidesOnViewport.forEach((slide, i)=>{
-        let pos = (i-1) * (slideWidth+spaceBetweenSlides) + (slidesCount>1?0:spaceBetweenSlides);
+        let pos = (i-1) * (slideWidthTemp+spaceBetweenSlides) + (slidesCount>1?0:spaceBetweenSlides);
         slide.style.left = pos + "px";
-        slide.style.minWidth = slideWidth + "px";
+        slide.style.minWidth = slideWidthTemp + "px";
       });
       slidesBuffer.forEach((slide, i)=>{
-        let pos = (i-1) * (slideWidth+spaceBetweenSlides) + (slidesCount>1?0:spaceBetweenSlides);
+        let pos = (i-1) * (slideWidthTemp+spaceBetweenSlides) + (slidesCount>1?0:spaceBetweenSlides);
         slide.style.left = pos + "px";
-        slide.style.minWidth = slideWidth + "px";
+        slide.style.minWidth = slideWidthTemp + "px";
       });
+      slideWidth = slideWidthTemp;
     });
 
     controlLeft.onclick = function() {
@@ -222,11 +250,8 @@ function Slider(options){
       left();
     }
 
-
-    controlLeft.addEventListener('dragstart', mousedown);
-    controlLeft.addEventListener('dragend', mouseup);
-    controlRight.addEventListener('dragstart', mousedown);
-    controlRight.addEventListener('dragend', mouseup);
+    content.addEventListener('dragstart', mousedown);
+    content.addEventListener('dragend', mouseup);
     canwindowResizeRefresh = true;
   }
 
