@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/public/css/global2.css">
+    <link rel="stylesheet" href="/public/css/fm.revealator.jquery.min.css">
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://kit.fontawesome.com/4c8293ed08.js"></script>
+    <script src="/public/js/jquery-1.11.3.min.js"></script>
+    <script src="/public/js/fm.revealator.jquery.min.js"></script>
     <title></title>
   </head>
+
   <body>
     <div class="block header">
       <img class="header-ellipse" src="/public/images/header-ellipse.png" alt="">
@@ -82,7 +86,7 @@
     <div class="block2">
       <h1> НАША <span>ПРОДУКЦИЯ</span> </h1>
       <div class="product-grid">
-        <div class="product">
+        <div class="product revealator-slideup">
           <div class="image" style="background-image: url('public/images/product-1.png')"></div>
           <h2>ТОВАРНЫЙ БЕТОН НА ГРАВИИ</h2>
           <p>М100 - 3 320 руб.</p>
@@ -96,7 +100,7 @@
             <a data-scroll href="#calculator">Рассчитать стоимость</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product revealator-slideup revealator-delay1">
           <div class="image" style="background-image: url('public/images/product-2.png')"></div>
           <h2>ТОВАРНЫЙ БЕТОН НА ГРАНИТЕ</h2>
           <p>М100 - 3 570 руб.</p>
@@ -112,7 +116,7 @@
             <a data-scroll href="#calculator">Рассчитать стоимость</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product revealator-slideup revealator-delay2">
           <div class="image" style="background-image: url('public/images/product-3.png')"></div>
           <h2>МОСТОВОЙ БЕТОН</h2>
           <p>М350 - 2700 руб.</p>
@@ -124,7 +128,7 @@
             <a data-scroll href="#calculator">Рассчитать стоимость</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product revealator-slideup revealator-delay">
           <div class="image" style="background-image: url('public/images/product-4.png')"></div>
           <h2>КЕРАМЗИТОБЕТОН</h2>
           <p>М100 - 3 400 руб.</p>
@@ -135,7 +139,7 @@
             <a data-scroll href="#calculator">Рассчитать стоимость</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product revealator-slideup revealator-delay1">
           <div class="image" style="background-image: url('public/images/product-5.png')"></div>
           <h2>ТОЩИЙ БЕТОН</h2>
           <p>М100 - 3 100 руб.</p>
@@ -145,7 +149,7 @@
             <a data-scroll href="#calculator">Рассчитать стоимость</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product revealator-slideup revealator-delay2">
           <div class="image" style="background-image: url('public/images/product-6.png')"></div>
           <h2>ПЕСКОБЕТОН</h2>
           <p>М100 - 2 850 руб.</p>
@@ -155,7 +159,7 @@
             <a data-scroll href="#calculator">Рассчитать стоимость</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product revealator-slideup revealator-delay">
           <div class="image" style="background-image: url('public/images/product-7.png')"></div>
           <h2>раствор</h2>
           <p>М100 - 2 850 руб.</p>
@@ -167,7 +171,7 @@
             <a data-scroll href="#calculator">Рассчитать стоимость</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product revealator-slideup revealator-delay1">
           <div class="image" style="background-image: url('public/images/product-8.png')"></div>
           <h2>ЦЕМЕНТНОЕ МОЛОКО К РАСТВОРУ</h2>
           <p>М100 - 4 000руб.</p>
@@ -185,8 +189,8 @@
     <!-- Блок 3 -->
     <a id="calculator"></a>
     <div class="block3">
-      <h1> Рассчитайте <br> <span>персональную стоимость бетона</span> </h1>
-      <div class="calculator">
+      <h1 class="revealator-zoomin"> Рассчитайте <br> <span>персональную стоимость бетона</span> </h1>
+      <div class="calculator revealator-zoomin revealator-delay1">
         <div class="fields">
           <div class="item">
             <div class="circle">1</div>
@@ -246,9 +250,9 @@
 
     <!-- Блок 4 -->
     <div class="block4">
-      <h1>Наши <span>преимущества</span> </h1>
+      <h1 class="revealator-zoomin">Наши <span>преимущества</span> </h1>
       <div class="items">
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay">
           <img src="public/images/block4-item-1.png" alt="">
           <h4>Всегда в наличии</h4>
           <p>
@@ -257,7 +261,7 @@
             7 дней в неделю. <br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay1">
           <img src="public/images/block4-item-2.png" alt="">
           <h4>БЕЗ ПОСРЕДНИКОВ</h4>
           <p>
@@ -266,7 +270,7 @@
             Собственные бетонные заводы.<br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay2">
           <img src="public/images/block4-item-3.png" alt="">
           <h4>ОПЛАТА</h4>
           <p>
@@ -275,7 +279,7 @@
             по факту или отсрочку платежа.<br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay">
           <img src="public/images/block4-item-4.png" alt="">
           <h4>СВОЙ АВТОПАРК</h4>
           <p>
@@ -283,7 +287,7 @@
             более 67 единиц техники.<br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay1">
           <img src="public/images/block4-item-5.png" alt="">
           <h4>ДОСТАВКА И ОТГРУЗКА</h4>
           <p>
@@ -291,7 +295,7 @@
             У нас есть все необходимое!<br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay2">
           <img src="public/images/block4-item-6.png" alt="">
           <h4>ВЕСОВОЙ КОНТРОЛЬ</h4>
           <p>
@@ -301,7 +305,7 @@
             договора поставки.<br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay">
           <img src="public/images/block4-item-7.png" alt="">
           <h4>СЕРТИФИКАТЫ <br>И ПАСПОРТА КАЧЕСТВА</h4>
           <p>
@@ -311,7 +315,7 @@
             требованиям ГОСТ.<br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay1">
           <img src="public/images/block4-item-8.png" alt="">
           <h4>СОБСТВЕННАЯ ЛАБОРАТОРИЯ</h4>
           <p>
@@ -322,7 +326,7 @@
             плотность и др.<br>
           </p>
         </div>
-        <div class="item">
+        <div class="item revealator-slideright revealator-delay2">
           <img src="public/images/block4-item-9.png" alt="">
           <h4>СКИДКИ и ПРЕДЛОЖЕНИЯ</h4>
           <p>
@@ -332,16 +336,16 @@
           </p>
         </div>
       </div>
-      <div class="btn">
+      <div class="btn revealator-zoomout revealator-delay">
         <a data-scroll href="#calculator">Рассчитать стоимость</a>
       </div>
     </div>
 
     <div class="block5">
-      <h1>ПАСПОРТА <span>КАЧЕСТВА на БЕТОН</span> </h1>
+      <h1 class="revealator-slideup">ПАСПОРТА <span>КАЧЕСТВА на БЕТОН</span> </h1>
 
       <div class="wrapper">
-        <div class="slider" data-slideWidth="280">
+        <div class="slider revealator-zoomout" data-slideWidth="280">
           <div class="control-wrapper control-wrapper-left">
             <div class="control control-left">
               <img src="public/images/arrow-right.png" alt="">
@@ -380,8 +384,8 @@
           </div>
         </div>
 
-        <h1>Наше <span>бетонное производство</span> </h1>
-        <div class="slider" data-slideWidth="380">
+        <h1 class="revealator-slideup">Наше <span>бетонное производство</span> </h1>
+        <div class="slider revealator-zoomout" data-slideWidth="380">
           <div class="control-wrapper control-wrapper-left">
             <div class="control control-left">
               <img src="public/images/arrow-right.png" alt="">
@@ -405,16 +409,16 @@
             </div>
           </div>
         </div>
-        <div class="btn">
+        <div class="btn revealator-zoomin">
           <a data-scroll href="#calculator">Рассчитать стоимость</a>
         </div>
       </div>
     </div>
 
     <div class="block6">
-      <h1>Отзывы <span>О нас</span> </h1>
+      <h1 class="revealator-slideup">Отзывы <span>О нас</span> </h1>
       <!-- Feedback #1 -->
-      <div class="feedback-card">
+      <div class="feedback-card revealator-fade">
         <div class="card-header">
           <div class="avatar" style="background-image: url('public/images/feedbacks-avatar1.png')"></div>
           <div class="feedback">
@@ -436,11 +440,11 @@
           </div>
         </div>
         <div class="photos">
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback1-foto1.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback1-foto2.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback1-foto3.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback1-foto4.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback1-foto5.png');"></div>
+          <div class="photo revealator-slideleft" style="background-image: url('/public/images/feedbacks-feedback1-foto1.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay1" style="background-image: url('/public/images/feedbacks-feedback1-foto2.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay2" style="background-image: url('/public/images/feedbacks-feedback1-foto3.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay3" style="background-image: url('/public/images/feedbacks-feedback1-foto4.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay4" style="background-image: url('/public/images/feedbacks-feedback1-foto5.png');"></div>
         </div>
         <div class="slider" data-fullScreen="true">
           <div class="control-wrapper control-wrapper-left">
@@ -474,7 +478,7 @@
       </div>
 
       <!-- Feedback #2 -->
-      <div class="feedback-card">
+      <div class="feedback-card revealator-fade">
         <div class="card-header">
           <div class="avatar" style="background-image: url('public/images/feedbacks-avatar2.png')"></div>
           <div class="feedback">
@@ -497,11 +501,11 @@
           </div>
         </div>
         <div class="photos">
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback2-foto1.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback2-foto2.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback2-foto3.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback2-foto4.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback2-foto5.png');"></div>
+          <div class="photo revealator-slideleft" style="background-image: url('/public/images/feedbacks-feedback2-foto1.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay1" style="background-image: url('/public/images/feedbacks-feedback2-foto2.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay2" style="background-image: url('/public/images/feedbacks-feedback2-foto3.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay3" style="background-image: url('/public/images/feedbacks-feedback2-foto4.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay4" style="background-image: url('/public/images/feedbacks-feedback2-foto5.png');"></div>
         </div>
         <div class="slider" data-fullScreen="true">
           <div class="control-wrapper control-wrapper-left">
@@ -536,7 +540,7 @@
 
 
       <!-- Feedback #3 -->
-      <div class="feedback-card">
+      <div class="feedback-card revealator-fade">
         <div class="card-header">
           <div class="avatar" style="background-image: url('public/images/feedbacks-avatar3.png')"></div>
           <div class="feedback">
@@ -557,11 +561,11 @@
           </div>
         </div>
         <div class="photos">
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback3-foto1.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback3-foto2.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback3-foto3.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback3-foto4.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback3-foto5.png');"></div>
+          <div class="photo revealator-slideleft" style="background-image: url('/public/images/feedbacks-feedback3-foto1.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay1" style="background-image: url('/public/images/feedbacks-feedback3-foto2.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay2" style="background-image: url('/public/images/feedbacks-feedback3-foto3.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay3" style="background-image: url('/public/images/feedbacks-feedback3-foto4.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay4" style="background-image: url('/public/images/feedbacks-feedback3-foto5.png');"></div>
         </div>
         <div class="slider" data-fullScreen="true">
           <div class="control-wrapper control-wrapper-left">
@@ -595,7 +599,7 @@
       </div>
 
       <!-- Feedback #4 -->
-      <div class="feedback-card">
+      <div class="feedback-card revealator-fade">
         <div class="card-header">
           <div class="avatar" style="background-image: url('public/images/feedbacks-avatar4.png')"></div>
           <div class="feedback">
@@ -616,11 +620,11 @@
           </div>
         </div>
         <div class="photos">
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback4-foto1.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback4-foto2.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback4-foto3.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback4-foto4.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback4-foto5.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay" style="background-image: url('/public/images/feedbacks-feedback4-foto1.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay1" style="background-image: url('/public/images/feedbacks-feedback4-foto2.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay2" style="background-image: url('/public/images/feedbacks-feedback4-foto3.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay3" style="background-image: url('/public/images/feedbacks-feedback4-foto4.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay4" style="background-image: url('/public/images/feedbacks-feedback4-foto5.png');"></div>
         </div>
         <div class="slider" data-fullScreen="true">
           <div class="control-wrapper control-wrapper-left">
@@ -655,7 +659,7 @@
 
 
       <!-- Feedback #5 -->
-      <div class="feedback-card">
+      <div class="feedback-card revealator-fade">
         <div class="card-header">
           <div class="avatar" style="background-image: url('public/images/feedbacks-avatar5.png')"></div>
           <div class="feedback">
@@ -676,11 +680,11 @@
           </div>
         </div>
         <div class="photos">
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback5-foto1.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback5-foto2.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback5-foto3.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback5-foto4.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback5-foto5.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay" style="background-image: url('/public/images/feedbacks-feedback5-foto1.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay1" style="background-image: url('/public/images/feedbacks-feedback5-foto2.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay2" style="background-image: url('/public/images/feedbacks-feedback5-foto3.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay3" style="background-image: url('/public/images/feedbacks-feedback5-foto4.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay4" style="background-image: url('/public/images/feedbacks-feedback5-foto5.png');"></div>
         </div>
         <div class="slider" data-fullScreen="true">
           <div class="control-wrapper control-wrapper-left">
@@ -714,7 +718,7 @@
       </div>
 
       <!-- Feedback #6 -->
-      <div class="feedback-card">
+      <div class="feedback-card revealator-fade">
         <div class="card-header">
           <div class="avatar" style="background-image: url('public/images/feedbacks-avatar6.png')"></div>
           <div class="feedback">
@@ -735,11 +739,11 @@
           </div>
         </div>
         <div class="photos">
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback6-foto1.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback6-foto2.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback6-foto3.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback6-foto4.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback6-foto5.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay" style="background-image: url('/public/images/feedbacks-feedback6-foto1.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay1" style="background-image: url('/public/images/feedbacks-feedback6-foto2.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay2" style="background-image: url('/public/images/feedbacks-feedback6-foto3.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay3" style="background-image: url('/public/images/feedbacks-feedback6-foto4.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay4" style="background-image: url('/public/images/feedbacks-feedback6-foto5.png');"></div>
         </div>
         <div class="slider" data-fullScreen="true">
           <div class="control-wrapper control-wrapper-left">
@@ -773,7 +777,7 @@
       </div>
 
       <!-- Feedback #7 -->
-      <div class="feedback-card">
+      <div class="feedback-card revealator-fade">
         <div class="card-header">
           <div class="avatar" style="background-image: url('public/images/feedbacks-avatar7.png')"></div>
           <div class="feedback">
@@ -796,11 +800,11 @@
           </div>
         </div>
         <div class="photos">
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback7-foto1.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback7-foto2.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback7-foto3.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback7-foto4.png');"></div>
-          <div class="photo" style="background-image: url('/public/images/feedbacks-feedback7-foto5.png');"></div>
+          <div class="photo revealator-slideleft" style="background-image: url('/public/images/feedbacks-feedback7-foto1.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay1" style="background-image: url('/public/images/feedbacks-feedback7-foto2.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay2" style="background-image: url('/public/images/feedbacks-feedback7-foto3.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay3" style="background-image: url('/public/images/feedbacks-feedback7-foto4.png');"></div>
+          <div class="photo revealator-slideleft revealator-delay4" style="background-image: url('/public/images/feedbacks-feedback7-foto5.png');"></div>
         </div>
         <div class="slider" data-fullScreen="true">
           <div class="control-wrapper control-wrapper-left">
@@ -836,40 +840,40 @@
 
     <!-- Block 7 -->
     <div class="block7">
-      <h1> МЫ БУДЕМ РАДЫ ВИДЕТЬ ВАС <br> <span>КЛИЕНТАМИ НАШЕЙ КОМПАНИИ!</span> </h1>
+      <h1 class="revealator-slideup"> МЫ БУДЕМ РАДЫ ВИДЕТЬ ВАС <br> <span>КЛИЕНТАМИ НАШЕЙ КОМПАНИИ!</span> </h1>
 
       <div class="addresses">
-        <div class="address">
+        <div class="address revealator-slideright revealator-delay1">
           <i class="fas fa-map-marker-alt"></i>
           г. Москва, Очаковское шоссе, д.5а
         </div>
-        <div class="address">
+        <div class="address revealator-slideright revealator-delay2">
           <i class="fas fa-map-marker-alt"></i>
           г. Москва, ул. Адмирала Корнилова, д.5
         </div>
-        <div class="address">
+        <div class="address revealator-slideright revealator-delay3">
           <i class="fas fa-map-marker-alt"></i>
           г.Москва, ул.Южнопортовая, д.9А, стр. 10
         </div>
 
-        <div class="address">
+        <div class="address revealator-slideright revealator-delay4">
           <i class="fas fa-map-marker-alt"></i>
           г. Москва, Дмитровское шоссе, д.163
         </div>
-        <div class="address">
+        <div class="address revealator-slideright revealator-delay5">
           <i class="fas fa-map-marker-alt"></i>
           МО, г. Балашиха, Объездное шоссе, д.3А
         </div>
-        <div class="address">
+        <div class="address revealator-slideright revealator-delay6">
           <i class="fas fa-map-marker-alt"></i>
           МО г. Реутов, ул. Ленина, д.19/10
         </div>
-        <div class="address">
+        <div class="address revealator-slideright revealator-delay7">
           <i class="fas fa-map-marker-alt"></i>
           МО, Красногорский район, Нахабино, <br> ул.Красноармейская, д.616
         </div>
       </div>
-      <div class="desktop-map">
+      <div class="desktop-map revealator-fade">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A73ba72d3673af4d2d675651a82fc1ba4bbfdf9fbce5a97b8d492b8a2d78fae5e&amp;width=100%25&amp;height=710&amp;lang=ru_RU&amp;scroll=true"></script>
         <div class="bg offset-img1">
           <img src="public/images/block7-img1.png" alt="">
@@ -878,12 +882,12 @@
           <img src="public/images/block7-img2.png" alt="">
         </div>
       </div>
-      <div class="mobile-map">
+      <div class="mobile-map revealator-fade">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A73ba72d3673af4d2d675651a82fc1ba4bbfdf9fbce5a97b8d492b8a2d78fae5e&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
 
-      <h2>Наш адрес:</h2>
-      <div class="contacts">
+      <h2 class="revealator-fade">Наш адрес:</h2>
+      <div class="contacts revealator-fade">
         <div class="contact">
           <i class="fas fa-map-marker-alt"></i>
           МО, Старая Купавна, ул. Большая Московская,<br>
@@ -903,13 +907,13 @@
         </div>
       </div>
 
-      <div class="desktop-map">
+      <div class="desktop-map revealator-fade">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A73ba72d3673af4d2d675651a82fc1ba4bbfdf9fbce5a97b8d492b8a2d78fae5e&amp;width=100%25&amp;height=552&amp;lang=ru_RU&amp;scroll=true"></script>
         <div class="bg offset-img3">
           <img src="public/images/block7-img3.png" alt="">
         </div>
       </div>
-      <div class="mobile-map">
+      <div class="mobile-map revealator-fade">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A73ba72d3673af4d2d675651a82fc1ba4bbfdf9fbce5a97b8d492b8a2d78fae5e&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </div>
