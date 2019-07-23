@@ -14,6 +14,19 @@
   </head>
 
   <body>
+    <div class="loaderArea">
+      <div id="cube-loader">
+       <div class="caption">
+         <div class="cube-loader">
+           <div class="cube loader-1"></div>
+           <div class="cube loader-2"></div>
+           <div class="cube loader-4"></div>
+           <div class="cube loader-3"></div>
+         </div>
+       </div>
+     </div>
+    </div>
+
     <div class="block header">
       <img class="header-ellipse" src="/public/images/header-ellipse.png" alt="">
       <img class="header-car" src="/public/images/header-car.png" alt="">
@@ -1139,5 +1152,15 @@
         });
       });
     </script>
+
+    <script>
+      $(window).on('load', function () {
+        $preloader = $('.loaderArea'),
+          $loader = $preloader.find('.loader');
+        $loader.fadeOut();
+        $preloader.fadeOut();
+      });
+    </script>
+
   </body>
 </html>
