@@ -1709,8 +1709,9 @@ a {
 #cube-loader {
   align-items: center;
   display: flex;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
   position: fixed;
 }
 #cube-loader .caption {
